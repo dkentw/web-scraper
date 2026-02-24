@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# uv
+.python-version
+
+# Playwright
+playwright/.local-browsers/
+
+# Output / database
+/output/
+*.db
+*.sqlite
+
+# Environment variables
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy / ruff / type checkers
+.mypy_cache/
+.ruff_cache/

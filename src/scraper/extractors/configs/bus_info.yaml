@@ -1,0 +1,16 @@
+# Basic format 
+#   <key name>:
+#     selector: str
+#     type: text | extract_func
+
+bus_number:
+  selector: "span.rt_title"
+  type: text
+
+direction:
+  selector: "span.rt_dir_go"
+  type: text
+
+mapstops:
+  selector: "#plMapStops > div"
+  type: extract_func
