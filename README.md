@@ -50,8 +50,8 @@ uv run python -m scraper --url https://example.com/bus/route --category bus --ou
 Check whether a bus is approaching your target stop based on a saved scrape result.
 
 ```bash
-uv run bus_status.py --stop "目標站名"
-uv run bus_status.py --stop "目標站名" --input path/to/results.json
+uv run python bus_status.py --stop "目標站名"
+uv run python bus_status.py --stop "目標站名" --input path/to/results.json
 ```
 
 The tool reads `output/results.json` (or a custom `--input` path), finds the target stop, and reports any buses currently arriving at stops before it, along with how many stops away each bus is. The message is highlighted in red when a bus is at the immediately preceding stop.
