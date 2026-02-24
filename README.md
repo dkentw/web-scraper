@@ -4,7 +4,7 @@ A modular Python web scraper that uses Playwright to scrape dynamic, JavaScript-
 
 ## Setup
 
-Requires [uv](https://docs.astral.sh/uv/) for dependency management.
+Requires **Python 3.12+** and [uv](https://docs.astral.sh/uv/) for dependency management.
 
 ```bash
 # Install dependencies
@@ -44,6 +44,17 @@ uv run python -m scraper --url https://example.com/bus/route --category bus --ou
 # Custom output path
 uv run python -m scraper --url https://example.com/bus/route --category bus --output-path results/data.json
 ```
+
+## Bus Status Tool
+
+Check whether a bus is approaching your target stop based on a saved scrape result.
+
+```bash
+uv run bus_status.py --stop "目標站名"
+uv run bus_status.py --stop "目標站名" --input path/to/results.json
+```
+
+The tool reads `output/results.json` (or a custom `--input` path), finds the target stop, and reports any buses currently arriving at stops before it, along with how many stops away each bus is. The message is highlighted in red when a bus is at the immediately preceding stop.
 
 ## Extractors
 
@@ -90,3 +101,13 @@ src/scraper/
 ```bash
 uv run pytest tests/ -v
 ```
+
+## VS Code Extensions
+
+| Extension | ID |
+|-----------|----|
+| SQLite Viewer | `qwtel.sqlite-viewer` |
+| Even Better TOML | `tamasfe.even-better-toml` |
+| JSON | `zainchen.json` |
+| Marp for VS Code | `marp-team.marp-vscode` |
+| Markdown All in One | `yzhang.markdown-all-in-one` |
